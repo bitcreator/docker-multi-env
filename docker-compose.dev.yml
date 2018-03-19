@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+    nginx:
+        build:
+            context: docker/nginx
+            dockerfile: dev.Dockerfile
+        container_name: nginx_dev
+
+    php:
+        build:
+            context: docker/php
+            dockerfile: dev.Dockerfile
+        container_name: php_dev

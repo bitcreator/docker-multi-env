@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+    nginx:
+        build:
+            context: docker/nginx
+            dockerfile: prod.Dockerfile
+        container_name: nginx_prod
+
+    php:
+        build:
+            context: docker/php
+            dockerfile: prod.Dockerfile
+        container_name: php_prod
